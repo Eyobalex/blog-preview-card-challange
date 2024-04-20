@@ -31,6 +31,9 @@ body {
   width: var(--width-desktop);
   background-color: var(--color-primary);
   padding: 21.85rem 0; }
+  @media only screen and (max-width: 575px) {
+    .container {
+      width: var(--width-mobile); } }
 
 p {
   font-size: 1.6rem; }

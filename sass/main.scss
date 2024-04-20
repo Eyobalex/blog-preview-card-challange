@@ -18,7 +18,7 @@
 html {
   font-size: 62.5%;
 
-  @media only screen and (max-width: 575px){
+  @media only screen and (max-width: 575px) {
     font-size: 50%;
   }
   @media only screen and (max-width: 370px) {
@@ -39,11 +39,16 @@ body {
   width: var(--width-desktop);
   background-color: var(--color-primary);
   padding: 21.85rem 0;
+
+  @media only screen and (max-width: 575px) {
+    width: var(--width-mobile);
+  }
 }
 
-p{
+p {
   font-size: 1.6rem;
 }
+
 .card {
 
   background-color: var(--color-white);
@@ -57,12 +62,13 @@ p{
   gap: 24px;
 
   &:focus,
-  &:hover{
-  box-shadow: 16px 16px 0 0 var(--color-black);
+  &:hover {
+    box-shadow: 16px 16px 0 0 var(--color-black);
 
   }
+
   &:focus &__title,
-  &:hover &__title{
+  &:hover &__title {
     color: var(--color-primary);
 
   }
