@@ -40,9 +40,6 @@ body {
   background-color: var(--color-primary);
   padding: 21.85rem 0;
 
-  @media only screen and (max-width: 575px) {
-    width: var(--width-mobile);
-  }
 }
 
 p {
