@@ -13,6 +13,12 @@
 
 html {
   font-size: 62.5%; }
+  @media only screen and (max-width: 575px) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 370px) {
+    html {
+      font-size: 31.25%; } }
 
 body {
   font-family: "Figtree", sans-serif;
@@ -25,3 +31,49 @@ body {
   width: var(--width-desktop);
   background-color: var(--color-primary);
   padding: 21.85rem 0; }
+
+p {
+  font-size: 1.6rem; }
+
+.card {
+  background-color: var(--color-white);
+  width: 38.4rem;
+  padding: 2.4rem;
+  border-radius: 2rem;
+  box-shadow: 8px 8px 0 0 var(--color-black);
+  display: flex;
+  flex-direction: column;
+  gap: 24px; }
+  .card:focus, .card:hover {
+    box-shadow: 16px 16px 0 0 var(--color-black); }
+  .card:focus .card__title,
+  .card:hover .card__title {
+    color: var(--color-primary); }
+  .card__img-container {
+    border-radius: 1rem;
+    overflow: hidden; }
+  .card__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem; }
+  .card__tag {
+    display: inline-block;
+    background-color: var(--color-primary);
+    padding: .4rem 1.2rem;
+    font-weight: 800;
+    align-self: flex-start;
+    border-radius: .4rem; }
+  .card__date {
+    font-size: 1.1rem;
+    font-weight: 300; }
+  .card__description {
+    color: var(--color-grey); }
+  .card__footer {
+    display: flex;
+    align-items: center; }
+  .card__avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.2rem; }
+  .card__username {
+    font-weight: 800; }

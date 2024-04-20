@@ -1,4 +1,4 @@
-:root{
+:root {
   --width-desktop: 144rem;
   --width-mobile: 37.5rem;
 
@@ -17,6 +17,13 @@
 
 html {
   font-size: 62.5%;
+
+  @media only screen and (max-width: 575px){
+    font-size: 50%;
+  }
+  @media only screen and (max-width: 370px) {
+    font-size: 31.25%;
+  }
 }
 
 body {
@@ -24,7 +31,7 @@ body {
   box-sizing: border-box;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,4 +39,81 @@ body {
   width: var(--width-desktop);
   background-color: var(--color-primary);
   padding: 21.85rem 0;
+}
+
+p{
+  font-size: 1.6rem;
+}
+.card {
+
+  background-color: var(--color-white);
+  width: 38.4rem;
+  padding: 2.4rem;
+  border-radius: 2rem;
+  box-shadow: 8px 8px 0 0 var(--color-black);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  &:focus,
+  &:hover{
+  box-shadow: 16px 16px 0 0 var(--color-black);
+
+  }
+  &:focus &__title,
+  &:hover &__title{
+    color: var(--color-primary);
+
+  }
+
+  &__img-container {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+
+  &__img {
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  &__tag {
+
+    display: inline-block;
+    background-color: var(--color-primary);
+    padding: .4rem 1.2rem;
+    font-weight: 800;
+    align-self: flex-start;
+    border-radius: .4rem;
+  }
+
+  &__date {
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  &__description {
+
+    color: var(--color-grey);
+  }
+
+  &__footer {
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__avatar {
+    width: 3.2rem;
+    height: 3.2rem;
+    margin-right: 1.2rem;
+  }
+
+  &__username {
+    font-weight: 800;
+  }
 }
